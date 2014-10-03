@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '$c4kdp4okdu^w6ab5qrr($ik#%ld05opoay8v62lw65b+%a+q)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ec2-54-164-170-108.compute-1.amazonaws.com"]
 
 
 # Application definition
