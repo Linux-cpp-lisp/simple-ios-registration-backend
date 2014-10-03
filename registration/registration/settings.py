@@ -89,5 +89,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected-static')
 
 #Uploaded Files
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded-media')
+MEDIA_ROOT = '/home/ec2-user/registration-app/uploaded-media/'
 MEDIA_URL = '/media/'
