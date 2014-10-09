@@ -13,7 +13,7 @@ def register(request):
         if(form.is_valid()):
             user, created = User.objects.get_or_create(username = form.cleaned_data['username'], email = form.cleaned_data['email'])
             if(not created):
-                return HttpResponseBadRequest("An accound with this username or email already exists.")
+                return HttpResponseBadRequest("An account with this username or email already exists.")
             else:
                 user.set_password(form.cleaned_data['password'])
                 user.save()
