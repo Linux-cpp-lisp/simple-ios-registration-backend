@@ -16,9 +16,10 @@ def register(request):
                 return HttpResponseBadRequest("An accound with this username or email already exists.")
             else:
                 user.set_password(form.cleaned_data['password'])
-                avatar = Avatar(user = user, avatar_image = form.cleaned_data['avatar'])
                 user.save()
-                avatar.save()
+                if(form.cleaned_data['avatar'] != None):
+                    avatar = Avatar(user = user, avatar_image = form.cleaned_data['avatar'])
+                    avatar.save()
                 return HttpResponse()
         else:
             return HttpResponseBadRequest("There was something wrong with the information you inputed: %s" % form.errors) 
