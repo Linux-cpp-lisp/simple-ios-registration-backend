@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '$c4kdp4okdu^w6ab5qrr($ik#%ld05opoay8v62lw65b+%a+q)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = False
 
@@ -85,9 +85,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'collected-static')
+STATIC_ROOT = '/var/www/registration/registration/collected-static/'
 
 #Uploaded Files
 
-MEDIA_ROOT = '/home/ec2-user/registration-app/uploaded-media/'
+MEDIA_ROOT = '/var/www/registration/registration/uploaded-media/'
 MEDIA_URL = '/media/'
