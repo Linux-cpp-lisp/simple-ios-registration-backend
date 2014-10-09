@@ -21,7 +21,7 @@ def register(request):
                 avatar.save()
                 return HttpResponse()
         else:
-            return HttpResponseBadRequest("There was something wrong with the information you inputed. Please try again.") 
+            return HttpResponseBadRequest("There was something wrong with the information you inputed: %s" % form.errors) 
     else:
         return HttpResponseBadRequest("This endpoint does not support any method other than POST.")
 
